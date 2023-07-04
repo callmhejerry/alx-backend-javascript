@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 export default function updateStudentGradeByCity(students, city, newGrades) {
   const studentInCity = students.filter((student) => student.location === city);
   return studentInCity.map((student) => {
