@@ -1,5 +1,3 @@
 export default function getStudentIdsSum(students) {
-    return students.reduce((first, second) => {
-        return first + second.id;
-    }, 0);
+  return students.reduce((first, second) => first + second.id, 0);
 }

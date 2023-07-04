@@ -1,19 +1,19 @@
 export default function cleanSet(set, startString) {
-    let newString = '';
+  let newString = '';
 
-    if (startString === '') {
-        return newString;
-    }
-    for (let element of set) {
-        if (element.startsWith(startString)) {
-            let subString = element.substring(startString.length);
-            if (newString === '') {
-                newString += subString;
-            } else {
-                newString += `-${subString}`;
-            }
-        }
-    }
-
+  if (startString === '') {
     return newString;
+  }
+  for (const element of set) {
+    if (element.startsWith(startString)) {
+      const subString = element.substring(startString.length);
+      if (newString === '') {
+        newString += subString;
+      } else {
+        newString += `-${subString}`;
+      }
+    }
+  }
+
+  return newString;
 }
