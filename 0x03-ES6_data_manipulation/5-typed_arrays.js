@@ -1,4 +1,4 @@
-export default function createInt8TypedArray(length, position, value) {
+export default function createInt8TypedArray (length, position, value) {
   const arrBuff = new ArrayBuffer(length);
   const int8Arr = new Int8Array(arrBuff);
 

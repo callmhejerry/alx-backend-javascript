@@ -1,4 +1,4 @@
-export default function hasValuesFromArray(set, array) {
+export default function hasValuesFromArray (set, array) {
   for (const arrItem of array) {
     let seen = false;
     for (const setItem of set) {
