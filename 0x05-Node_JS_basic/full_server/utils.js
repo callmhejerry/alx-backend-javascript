@@ -21,7 +21,7 @@ function readDatabase(filePath) {
   return new Promise((resolve, reject) => {
     fs.readFile(filePath, { encoding: 'utf8' }, (err, data) => {
       if (err) {
-        reject(new Error('Cannot load the database'));
+        reject(err);
       } else {
         const dataArr = data.trim().split('\n');
         const csFirstNames = sortStudent(dataArr, 'CS');
