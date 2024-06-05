@@ -8,8 +8,8 @@ class StudentsController {
       const msg = 'This is the list of our students';
       const results = await readDatabase(process.argv[2].toString());
 
-      const csMessage = `Number of students in CS: ${results.cs.length}. List: ${results.cs}`;
-      const sweMessage = `Number of students in SWE: ${results.swe.length}. List: ${results.swe}`;
+      const csMessage = `Number of students in CS: ${results.cs.length}. List:${results.cs}`;
+      const sweMessage = `Number of students in SWE: ${results.swe.length}. List:${results.swe}`;
       response.send(`${msg}\n${csMessage}\n${sweMessage}`);
     } catch (error) {
       response.status(500).send('Cannot load the database');
@@ -24,9 +24,9 @@ class StudentsController {
       const { major } = request.params;
 
       if (major === 'SWE') {
-        response.send(`List: ${results.swe}`);
+        response.send(`List:${results.swe}`);
       } else if (major === 'CS') {
-        response.send(`List: ${results.cs}`);
+        response.send(`List:${results.cs}`);
       } else {
         response.status(500).send('Major parameter must be CS or SWE');
       }
