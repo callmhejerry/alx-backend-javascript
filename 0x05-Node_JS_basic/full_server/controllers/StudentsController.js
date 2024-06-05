@@ -4,6 +4,7 @@ class StudentsController {
   static async getAllStudents(request, response) {
     try {
       response.status(200);
+      response.set('Content-Type', 'text/plain');
       const msg = 'This is the list of our students';
       const results = await readDatabase(process.argv[2].toString());
 
@@ -19,6 +20,7 @@ class StudentsController {
     try {
       response.status(200);
       const results = await readDatabase(process.argv[2].toString());
+      response.set('Content-Type', 'text/plain');
       const { major } = request.params;
 
       if (major === 'SWE') {
